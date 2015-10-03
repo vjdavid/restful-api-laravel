@@ -50,7 +50,9 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+      $article = Article::find($id);
+
+      return response()->json($article);
     }
 
     /**
